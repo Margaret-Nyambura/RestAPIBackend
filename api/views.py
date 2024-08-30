@@ -2,9 +2,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from student.models import Student
-from classe.models import Classes
-from classperiod.models import ClassPeriod
-from courses.models import Courses
+from clases.models import Classes
+from class_period.models import ClassPeriod
+from course.models import Courses
 from teacher.models import Teacher
 from .serializers import (
     StudentSerializer, MinimalStudentSerializer,
@@ -69,7 +69,7 @@ class ClassesListView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class ClassesDetailView(APIView):
+class ClassDetailView(APIView):
     def get(self, request, id):
         classe = Classes.objects.get(id=id)
         serializer = ClassesSerializer(classe)  

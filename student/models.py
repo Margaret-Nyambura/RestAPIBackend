@@ -1,3 +1,5 @@
+
+
 from django.db import models   # Helps us get started with our models
 
 class Student(models.Model):

@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from student.models import Student
-from classe.models import Classes
-from classperiod.models import ClassPeriod
-from courses.models import Courses
+from clases.models import Classes
+from class_period.models import ClassPeriod
+from course.models import Courses
 from teacher.models import Teacher
 
 class CoursesSerializer(serializers.ModelSerializer):
